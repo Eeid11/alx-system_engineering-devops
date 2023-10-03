@@ -1,2 +1,6 @@
 #!/bin/bash
+<<<<<<< HEAD
 chomd 007 hello
+=======
+chmod 007 hello
+>>>>>>> fa04d79d78786510bb18fac88b6d656164e1cc04

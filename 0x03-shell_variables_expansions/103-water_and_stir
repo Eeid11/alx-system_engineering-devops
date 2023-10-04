@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$(echo "$WATER" | tr 'ewatrate' '0123456') + $(echo "$STIR" | tr 'ti.itr' '012345')" | bc | tr '0123456789' 'shtbeolhc'
+echo "$(( $(echo "$WATER" | tr 'ewatrate' '0123456') + $(echo "$STIR" | tr 'ti.itr' '012345') ))" | awk '{gsub(/0/,"s"); gsub(/1/,"h"); gsub(/2/,"t"); gsub(/3/,"b"); gsub(/4/,"e"); gsub(/5/,"o"); gsub(/6/,"l"); print}'

@@ -1,8 +1,2 @@
 #!/bin/bash
-water="$WATER"
-stir="$STIR"
-water_dec=$(echo "$water" | tr 'ewatrate' '0123456')
-stir_dec=$(echo "$stir" | tr 'ti.itr' '012345')
-result_dec=$((water_dec + stir_dec))
-result_base_bestchol=$(echo "$result_dec" | tr '0123456789' 'shtbeolhc')
-echo "$result_base_bestchol"
+echo "$(echo "$WATER" | tr 'ewatrate' '0123456') + $(echo "$STIR" | tr 'ti.itr' '012345')" | bc | tr '0123456789' 'shtbeolhc'

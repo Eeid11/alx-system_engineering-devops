@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# prints "Best School" 10 times
+
+
+old_ifs="$IFS"
+IFS="
+"
+LIST=''Best\ School'
+'Best\ School'
+'Best\ School'
+'Best\ School'
+'Best\ School'
+'Best\ School'
+'Best\ School'
+'Best\ School'
+'Best\ School'
+'Best\ School''
+
+for i in $LIST; do echo "$i"; done
+IFS="$old_ifs"

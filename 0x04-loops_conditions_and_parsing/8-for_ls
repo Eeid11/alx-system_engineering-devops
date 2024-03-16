@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# displays content of current directory
+
+for filename in $(find . -maxdepth 1 -mindepth 1 -printf '%P\n' | cut -d'-' -f2-)
+do
+	echo "$filename"
+done

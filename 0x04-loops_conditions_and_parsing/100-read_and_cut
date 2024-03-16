@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# reads /etc/passwd file and prints only username, UID, and Directory fields
+
+while IFS= read -r line; do
+	echo "$line" | cut -d':' -f1,3,6
+done < "/etc/passwd"

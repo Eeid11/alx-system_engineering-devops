@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# reads /etc/passwd file and prints its story
+
+while IFS= read -r line; do
+	echo -n "The user ";					echo -n "$line" | cut -d':' -f1 | tr -d $'\n' #USERNAME		
+	echo -n " is part of the ";				echo -n "$line" | cut -d':' -f4	| tr -d $'\n' #GROUP_ID
+	echo -n " gang, lives in ";				echo -n "$line" | cut -d':' -f6	| tr -d $'\n' #HOME_DIRECTORY
+	echo -n " and rides ";					echo -n "$line" | cut -d':' -f7	| tr -d $'\n' #COMMAND/SHELL
+	echo -n ". ";						echo -n "$line" | cut -d':' -f3	| tr -d $'\n' #USER_ID
+	echo -n "'s place is protected by the passcode ";	echo -n "$line" | cut -d':' -f2	| tr -d $'\n' #PASSWORD
+	echo -n ", more info about the user here: ";		echo -n "$line" | cut -d':' -f5	| tr -d $'\n' #USER_ID_INFO
+	echo
+done < "/etc/passwd"

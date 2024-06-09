@@ -1,3 +1,4 @@
+![OIP](https://github.com/Eeid11/alx-system_engineering-devops/assets/144378352/9bacd007-578b-4957-8d05-17d14249b54e)
 # Postmortem Report: Facebook Server Outage
 
 ## Issue Summary

@@ -1,29 +1,26 @@
-Postmortem Report: Facebook Server Outage
+# Project Name: Facebook Server Outage Postmortem
 
-Issue Summary
+## Description
+This repository contains the postmortem report for the recent Facebook server outage. It explains the incident, impact, root cause, and corrective measures taken.
 
-Duration: The outage occurred from 10:00 AM to 12:30 PM (PST).
-Impact: The web application was down, affecting approximately 20% of users.
-Root Cause: A misconfigured load balancer caused service disruptions.
-Timeline
-Issue Detection:
+## Table of Contents
+- Installation
+- Usage
+- Contributing
+- License
 
-Detected at 10:00 AM through monitoring alerts.
-Investigation Actions:
-Explored load balancer logs and backend services.
-Assumed backend database issues initially.
-Investigated incorrect firewall rules (misleading path).
-Escalation:
-Escalated to the Infrastructure team.
-Resolution:
+## Installation
+1. Clone this repository to your local machine.
+2. Navigate to the project directory.
+3. Read the postmortem report in the `postmortem.md` file.
 
-Corrected load balancer configuration.
-Root Cause and Resolution
-Root Cause:
+## Usage
+- Review the incident details in the report.
+- Understand the impact and root cause.
+- Learn from the corrective and preventative measures.
 
-The load balancer misconfiguration led to routing errors.
-Resolution:
-Updated load balancer settings.
-Corrective and Preventative Measures
-Improved monitoring for load balancer health.
-Scheduled regular configuration reviews.
+## Contributing
+Contributions are welcome! If you find any issues or have suggestions, feel free to open an issue or submit a pull request.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.

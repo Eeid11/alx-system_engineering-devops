@@ -1,26 +1,36 @@
-# Project Name: Facebook Server Outage Postmortem
+# Postmortem Report: Facebook Server Outage
 
-## Description
-This repository contains the postmortem report for the recent Facebook server outage. It explains the incident, impact, root cause, and corrective measures taken.
+## Issue Summary
+**Duration:** The outage occurred from 10:00 AM to 12:30 PM (PST).  
+**Impact:** The web application was down, affecting approximately 20% of users.  
+**Root Cause:** A misconfigured load balancer caused service disruptions.
 
-## Table of Contents
-- Installation
-- Usage
-- Contributing
-- License
+## Timeline
+- **10:00 AM:** Issue detected through monitoring alerts.
+- **10:05 AM:** Began investigation by exploring load balancer logs and backend services.
+- **10:15 AM:** Initially assumed backend database issues.
+- **10:30 AM:** Investigated incorrect firewall rules (misleading path).
+- **11:00 AM:** Escalated to the Infrastructure team.
+- **11:30 AM:** Infrastructure team identified the load balancer misconfiguration.
+- **12:00 PM:** Corrected load balancer configuration.
+- **12:30 PM:** Full service restoration confirmed.
 
-## Installation
-1. Clone this repository to your local machine.
-2. Navigate to the project directory.
-3. Read the postmortem report in the `postmortem.md` file.
+## Root Cause and Resolution
+**Root Cause:**  
+The misconfiguration of the load balancer caused routing errors, leading to service disruptions for approximately 20% of users. The misconfiguration involved incorrect routing rules that prevented requests from reaching the appropriate backend servers.
 
-## Usage
-- Review the incident details in the report.
-- Understand the impact and root cause.
-- Learn from the corrective and preventative measures.
+**Resolution:**  
+The issue was resolved by updating the load balancer settings to correct the routing rules. This involved reviewing the current configuration, identifying the errors, and applying the correct settings to ensure proper routing of traffic.
 
-## Contributing
-Contributions are welcome! If you find any issues or have suggestions, feel free to open an issue or submit a pull request.
+## Corrective and Preventative Measures
+**Improvements:**  
+- Enhance monitoring for load balancer health to detect similar issues promptly.
+- Implement regular configuration reviews to catch misconfigurations early.
+- Establish clearer documentation and procedures for load balancer configurations.
 
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+**Tasks:**
+- Add more detailed monitoring on load balancer performance and health checks.
+- Schedule bi-weekly reviews of load balancer configurations.
+- Update internal documentation to include best practices for load balancer setup and maintenance.
+- Conduct training sessions for the infrastructure team on load balancer management.
+
